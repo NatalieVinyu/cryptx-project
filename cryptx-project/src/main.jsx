@@ -1,10 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
+import MainContent from './components/layout/MainContent'
 
 createRoot(document.getElementById('root')).render(
+  // IMPORTED MAINCONTENT COMPONENT TO RENDER INSTEAD OF APP COMPONENT
   <StrictMode>
-    <App />
+    <MainContent />
   </StrictMode>,
 )
