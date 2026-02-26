@@ -2,6 +2,8 @@
 import React from 'react'
 import Sidebar from './Sidebar'
 import Header from './Header'
+import MetricCard from '../ui/MetricCard.jsx'
+
 
 function MainContent() {
   return (
@@ -11,6 +13,11 @@ function MainContent() {
       
         <div className='flex flex-col flex-1'>
           <Header />
+
+          <div className='grid grid-cols-2'>
+            <MetricCard />
+          </div>
+
         </div>
       </div>
       
