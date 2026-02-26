@@ -1,10 +1,18 @@
 //MAIN CONTENT COMPONENT
 import React from 'react'
 import Sidebar from './Sidebar'
+import Header from './Header'
 
 function MainContent() {
   return (
-    <div>
+    <div className='min-h-screen flex items-center justify-center'>
+      <div className='bg-white rounded-xl shadow flex w-[1200px] min-h-[500px]'>
+        <Sidebar />
+      
+        <div className='flex flex-col flex-1'>
+          <Header />
+        </div>
+      </div>
       
     </div>
   )
