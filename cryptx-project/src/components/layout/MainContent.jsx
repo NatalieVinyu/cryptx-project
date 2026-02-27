@@ -4,6 +4,7 @@ import Sidebar from './Sidebar'
 import Header from './Header'
 import MetricCard from '../ui/MetricCard.jsx'
 import ChartVisual from '../ui/ChartVisual.jsx'
+import TransactionTable from '../ui/TransactionTable.jsx'
 
 
 
@@ -19,6 +20,10 @@ function MainContent() {
           <div className='grid grid-cols-2'>
             <MetricCard />
             <ChartVisual />
+          </div>
+
+          <div>
+            <TransactionTable />
           </div>
 
         </div>
