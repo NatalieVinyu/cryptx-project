@@ -1,4 +1,8 @@
 import React from 'react'
+import lineGraphBlue from '../../assets/llline-blue.svg'
+import lineGraphYellow from '../../assets/llline-yellow.svg'
+import lineGraphGreen from '../../assets/llline-green.svg'
+
 
 function TransactionTable() {
   const liveMarket = [
@@ -8,7 +12,7 @@ function TransactionTable() {
       description: "ETH / USDT",
       change: "+14.02%",
       price: "39,786",
-      chart: "chart"
+      chart: lineGraphBlue,
     },
     {
       icon: "icon",
@@ -16,7 +20,7 @@ function TransactionTable() {
       description: "ETH / USDT",
       change: "+4.02%",
       price: "21,786",
-      chart: "chart"
+      chart: lineGraphYellow
     },
     {
       icon: "icon",
@@ -24,7 +28,7 @@ function TransactionTable() {
       description: "ITC / USDT",
       change: "-4.02%",
       price: "9,786",
-      chart: "chart"
+      chart: lineGraphBlue
     },
     {
       icon: "icon",
@@ -32,7 +36,7 @@ function TransactionTable() {
       description: "ADA / USDT",
       change: "+0.02%",
       price: "4,786",
-      chart: "chart"
+      chart: lineGraphGreen
     },
   ]
   const transactions = [
@@ -81,8 +85,8 @@ function TransactionTable() {
          <div key={index} className='flex gap-6'>  
             <div className='border-2 rounded-full p-2'>{items.icon}</div>
             <div className='flex flex-col'>
-              <div className='font-bold'>Ethereum</div>
-              <div className='text-gray-400'>ETH/USDT</div>
+              <div className='font-bold'>{items.title}</div>
+              <div className='text-gray-400'>{items.description}</div>
             </div>
 
             <div className='flex flex-col'>
@@ -95,7 +99,7 @@ function TransactionTable() {
               <div className='font-bold'>{items.price} USD</div>
             </div>
 
-            <div>{items.chart}</div>
+            <img src={items.chart} className="h-8 w-auto" />
           </div>
           ))}
          </div>
