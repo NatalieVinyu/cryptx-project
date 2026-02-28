@@ -8,7 +8,7 @@ function Sidebar() {
           CryptX
         </div>
 
-      <aside className='w-64'>
+      <aside className='w-45'>
         <ul className='space-y-4'>
           <li>
             Overview

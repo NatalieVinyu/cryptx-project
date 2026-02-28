@@ -71,15 +71,15 @@ function TransactionTable() {
   ]
 
   return (
-    <div className='grid grid-cols-2'>
+    <div className='grid grid-cols-1 md:grid-cols-3 items-stretch gap-2 pl-6'>
 
       {/* LIVE MARKET SECTION */}
-      <div className='flex flex-col'>
-        <div>
+      <div className='flex flex-col md:col-span-2'>
+        <div className='font-bold pb-4'>
           <h1>Live Market</h1>
         </div>
 
-        <div className='flex flex-col gap-6'>
+        <div className='flex flex-col gap-6 '>
           {liveMarket.map((items, index) => (
 
          <div key={index} className='flex gap-6'>  
@@ -108,16 +108,16 @@ function TransactionTable() {
 
 
       {/* TRANSACTIONS SECTION */}
-      <div className=''>
-        <div>
+      <div className='flex flex-col md:col-span-1'>
+        <div className='font-bold pb-4'>
           Transactions
         </div>
 
-        <div className='flex flex-col gap-6'>
+        <div className='flex flex-col gap-4 '>
           {transactions.map((ts, index) => (
 
           <div key={index} className='flex gap-6'>
-            <div>{ts.icon}</div>
+            <div className='border-2 rounded-full p-2'>{ts.icon}</div>
             <div className='flex flex-col'>
               <div className='font-bold'>{ts.title}</div>
               <div className='text-gray-400'>{ts.description}</div>
