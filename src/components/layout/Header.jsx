@@ -1,17 +1,15 @@
 import React from 'react';
-import { CiSearch } from "react-icons/ci";
+import { CiSearch, CiCircleQuestion } from "react-icons/ci";
 import { GoBell } from "react-icons/go";
-import { CiCircleQuestion } from "react-icons/ci";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-
 
 function Header() {
   return (
-    <div className='flex items-center h-16 bg-white border-b border-gray-200 px-6'>
+    <div className='flex items-center h-16 bg-white border-b border-gray-200 px-6 md:px-6'>
       <header className='flex justify-between items-center w-full'>
         
         {/* SEARCH BAR */}
-        <label className='border border-gray-400 rounded-xl flex items-center p-2'>
+        <label className='flex border border-gray-400 rounded-xl items-center p-2'>
           <input 
             type="text" 
             placeholder='Search type of keywords'
@@ -20,7 +18,7 @@ function Header() {
             <CiSearch className='w-4 h-4 text-gray-400' />
         </label>
 
-        <div className='flex items-center gap-4'>
+        <div className='flex ml-auto items-center gap-4'>
           <div className='flex gap-2 text-gray-600'>
             <GoBell className='w-5 h-5'/>
             <CiCircleQuestion className='w-5 h-5' />

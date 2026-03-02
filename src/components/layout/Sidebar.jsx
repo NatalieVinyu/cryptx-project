@@ -5,9 +5,11 @@ import { LuChartPie, LuWalletCards, LuSettings, LuWallet } from "react-icons/lu"
 import { FiMail } from "react-icons/fi";
 import { BiLogOut } from "react-icons/bi";
 import { IoInfinite } from "react-icons/io5";
+import { HiMenu } from "react-icons/hi";
 
 function Sidebar() {
-  const [active, setActive] = useState("Overview")
+  const [active, setActive] = useState("Overview");
+  const [isOpen, setIsOpen] = useState(false)
 
   const menu = [
     {
@@ -40,10 +42,16 @@ function Sidebar() {
     }
   ]
   return (
-    <aside className='bg-gray-100 p-6 w-50'>
+    <div>
+      <div className='md:hidden flex items-center p-4 bg-gray-100'>
+        <HiMenu className='w-6 h-6 cursor-pointer' onClick={() => setIsOpen(!isOpen)} />
+      </div>
+
+      {/* SIDEBAR CONTAINER */}
+      <aside className={`bg-gray-100 p-6 w-50 min-h-screen fixed md:relative z-50 transition-transform transform ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}>
 
         {/* LOGO */}
-        <div className='flex items-center gap-2 text-2xl font-bold pb-12'>
+        <div className='hidden md:flex items-center gap-2 text-2xl font-bold pb-12'>
           <IoInfinite className='text-blue-500 w-10 h-10'/>
           CryptX
         </div>
@@ -71,6 +79,7 @@ function Sidebar() {
           })}
         </ul>
       </aside>
+    </div>
         
   )
 }
