@@ -3,10 +3,10 @@ import Image from '../../assets/BTC Prices.png'
 
 function ChartVisual() {
   return (
-    <div>
+    <div className='p-2'>
       {/* Imported Image */}
-      <div>
-        <img src={Image} alt="Chart Visual" />
+      <div className='w-full'>
+        <img src={Image} alt="Chart Visual" className='w-full h-auto object-contain' />
       </div>
     </div>
   )

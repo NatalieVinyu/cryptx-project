@@ -8,11 +8,11 @@ import TransactionTable from '../ui/TransactionTable.jsx'
 
 function MainContent() {
   return (
-    <div className='min-h-screen flex items-center justify-center text-xs'>
-      <div className='bg-white rounded-xl shadow flex w-[1000px] min-h-[500px]'>
+    <div className='min-h-screen flex items-center md:items-center justify-center text-xs'>
+      <div className='bg-white rounded-xl shadow flex w-full max-w-[1000px] min-h-[500px] md:min-h-[500px]'>
         <Sidebar />
       
-        <div className='flex flex-col flex-1'>
+        <div className='flex flex-col flex-1 min-w-0'>
           <Header />
 
           <div className='grid grid-cols-1 md:grid-cols-2 '>

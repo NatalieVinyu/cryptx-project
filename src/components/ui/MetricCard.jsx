@@ -35,12 +35,12 @@ function MetricCard() {
   ]
 
   return (
-    <div className='grid grid-cols-2 p-4'>
+    <div className='grid grid-cols-2 p-4 gap-3'>
       {cards.map((item, index) => {
         const Icon = item.icon;
              
         return (
-        <div key={index} className='rounded-xl shadow-lg p-4 w-40'>
+        <div key={index} className='rounded-xl shadow-lg p-4 w-full'>
 
           <div className='flex justify-between items-center'>
             <div className='rounded-xl p-2' style={{ backgroundColor: item.color }}>
@@ -53,8 +53,8 @@ function MetricCard() {
           </div>
 
           <div className='mt-4'>
-            <div className='text-2xl font-bold'>{item.price}</div>
-            <p className='text-gray-400 pt-2'>{item.name}</p>
+            <div className='text-xl md:text-2xl font-bold'>{item.price}</div>
+            <p className='text-gray-400 pt-2 text-xs md:text-sm'>{item.name}</p>
           </div>
         </div>
         );

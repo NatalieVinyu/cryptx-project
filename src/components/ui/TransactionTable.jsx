@@ -83,7 +83,7 @@ function TransactionTable() {
   ]
 
   return (
-    <div className='grid grid-cols-1 md:grid-cols-3 items-stretch gap-2 px-6 pt-6'>
+    <div className='grid grid-cols-1 md:grid-cols-3 items-stretch gap-2 px-4 md:px-6 pt-6'>
 
       {/* LIVE MARKET SECTION */}
       <div className='flex flex-col md:col-span-2'>
@@ -96,28 +96,28 @@ function TransactionTable() {
             const Icon = items.icon;
           
           return (
-         <div key={index} className='flex-1 flex gap-4 items-center'> 
+         <div key={index} className='flex gap-3 items-center min-w-0'> 
 
-            <div className='border-2 border-gray-300 rounded-full p-2'>
+            <div className='border-2 border-gray-300 rounded-full p-2 flex-shrink-0'>
               <Icon className='w-5 h-5' style={{ color: items.color }}/>
             </div>
 
-            <div className='flex flex-col'>
+            <div className='flex flex-col w-20 flex-shrink-0'>
               <div className='font-bold pb-1'>{items.title}</div>
               <div className='text-gray-400'>{items.description}</div>
             </div>
 
-            <div className='flex-1 flex flex-col'>
+            <div className='flex-1 flex flex-col min-w-0'>
               <div className='text-gray-400 pb-1'>Change</div>
               <div className={`font-semibold ${items.change.startsWith("+") ? "text-green-300" : "text-red-300"}`}>{items.change}</div>
             </div>
 
-            <div className='flex-1 flex flex-col'>
+            <div className='flex-1 flex flex-col min-w-0 hidden sm:flex'>
               <div className='text-gray-400 pb-1'>Price</div>
               <div className='font-bold'>{items.price} USD</div>
             </div>
 
-            <div className='pl-6'>
+            <div className='flex-shrink-0'>
               <img src={items.chart} className="h-8 w-auto" />
             </div>
           </div>
@@ -129,7 +129,7 @@ function TransactionTable() {
 
 
       {/* TRANSACTIONS SECTION */}
-      <div className='flex flex-col md:col-span-1'>
+      <div className='flex flex-col md:col-span-1 mt-6 md:mt-0'>
         <div className='font-bold pb-4'>
           Transactions
         </div>
@@ -139,17 +139,17 @@ function TransactionTable() {
             const Icon = ts.icon;
 
             return (
-          <div key={index} className='flex-1 flex gap-8 items-center'>
+          <div key={index} className='flex gap-4 items-center min-w-0'>
 
-            <div className='border-1 border-gray-300 rounded-full p-2'>
+            <div className='border-1 border-gray-300 rounded-full p-2 flex-shrink-0'>
               <Icon className='w-4 h-4' style={{ color: ts.color }}/>
             </div>
-            <div className='flex-1 flex flex-col'>
+            <div className='flex-1 flex flex-col min-w-0'>
               <div className='font-bold pb-1'>{ts.title}</div>
               <div className='text-gray-400'>{ts.description}</div>
             </div>
 
-            <div className='flex-1 flex flex-col'>
+            <div className='flex-shrink-0 flex flex-col text-right'>
               <div className='text-bold pb-1'>{ts.price}</div>
               <div className='text-gray-400'>{ts.date}</div>
             </div>

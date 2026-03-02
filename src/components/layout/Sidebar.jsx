@@ -48,10 +48,10 @@ function Sidebar() {
       </div>
 
       {/* SIDEBAR CONTAINER */}
-      <aside className={`bg-gray-100 p-6 w-50 min-h-screen fixed md:relative z-50 transition-transform transform ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}>
+      <aside className={`bg-gray-100 p-6 w-64 min-h-screen fixed md:relative z-50 transition-transform transform ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}>
 
         {/* LOGO */}
-        <div className='hidden md:flex items-center gap-2 text-2xl font-bold pb-12'>
+        <div className='hidden sm:flex items-center gap-2 text-2xl font-bold pb-12'>
           <IoInfinite className='text-blue-500 w-10 h-10'/>
           CryptX
         </div>
