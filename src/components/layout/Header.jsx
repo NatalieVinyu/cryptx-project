@@ -25,7 +25,7 @@ function Header() {
           </div>
 
           <div className='flex items-center gap-2'>
-            <div className='rounded-full bg-gray-700 w-8 h-8 md:h-10 flex-shrink-0'></div>
+            <div className='rounded-full bg-gray-700 w-8 h-8 md:h-8 flex-shrink-0'></div>
             <div className='hidden sm:flex flex-col leading-tight'>
               <h1 className='font-semibold'>Laurice</h1>
               <p className='text-gray-400 text-sm'>@laurice22</p>
