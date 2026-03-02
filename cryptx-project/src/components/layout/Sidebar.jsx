@@ -40,7 +40,7 @@ function Sidebar() {
     }
   ]
   return (
-    <aside className='bg-gray-100 p-6 w-64'>
+    <aside className='bg-gray-100 p-6 w-50'>
 
         {/* LOGO */}
         <div className='flex items-center gap-2 text-2xl font-bold pb-12'>

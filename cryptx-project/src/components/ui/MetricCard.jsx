@@ -35,7 +35,7 @@ function MetricCard() {
   ]
 
   return (
-    <div className='grid grid-cols-2 p-2 gap-2'>
+    <div className='grid grid-cols-2 p-4'>
       {cards.map((item, index) => {
         const Icon = item.icon;
              

@@ -6,7 +6,7 @@ function ChartVisual() {
     <div>
       {/* Imported Image */}
       <div>
-        <img src={Image} alt="" />
+        <img src={Image} alt="Chart Visual" />
       </div>
     </div>
   )
